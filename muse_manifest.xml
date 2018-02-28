@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.132.com/box" resolutions="1x" timestamp="1519817286633">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.132.com/box" resolutions="1x" timestamp="1519822611374">
   <folder name="css">
     <file name="site_global.css" crc="3878679462"/>
     <file name="master_a-master.css" crc="4106021170" ref="index"/>
-    <file name="index.css" crc="4223719861" ref="index"/>
+    <file name="index.css" crc="116238763" ref="index"/>
     <file name="iefonts_index.css" crc="50410956" ref="index"/>
   </folder>
   <folder name="scripts">
@@ -16,9 +16,9 @@
     <file name="musewpslideshow.js" crc="457073769" ref="phone>index:tablet>index:index"/>
     <file name="jquery.museoverlay.js" crc="483674903" ref="phone>index:tablet>index:index"/>
     <file name="touchswipe.js" crc="4066113679" ref="phone>index:tablet>index:index"/>
-    <file name="form_check.php" crc="147359589" ref="phone>index"/>
-    <file name="form_throttle.php" crc="93986428" ref="phone>index"/>
-    <file name="form_process.php" crc="3851993751" ref="phone>index"/>
+    <file name="form_check.php" crc="147359589" ref="phone>index:index"/>
+    <file name="form_throttle.php" crc="93986428" ref="phone>index:index"/>
+    <file name="form_process.php" crc="3851993751" ref="phone>index:index"/>
     <file name="form-u17647.php" crc="4209542787" ref="phone>index"/>
     <file name="jquery.scrolleffects.js" crc="530399994" ref="phone>index:tablet>index:index"/>
     <file name="require.js" crc="4157109226" ref="phone>index:tablet>index:index"/>
@@ -36,7 +36,7 @@
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
-    <file name="user22-u17268-fr.jpg" crc="91104883" ref="phone>index:tablet>index:index"/>
+    <file name="user22-u17268-fr.jpg" crc="91104883" ref="phone>index:tablet>index"/>
     <file name="u17272.png" crc="132879888" ref="phone>index"/>
     <file name="u17272-r.png" crc="455601006" ref="phone>index"/>
     <file name="u17270.png" crc="4008101175" ref="phone>index"/>
@@ -295,6 +295,7 @@
       <caption webpage="index" alt=""/>
     </file>
     <file name="photo1-u7463-fr.jpg" crc="4284526146" ref="index"/>
+    <file name="user22-u15946-fr.jpg" crc="91104883" ref="index"/>
   </folder>
   <folder name="tablet">
     <folder name="css">
@@ -310,5 +311,5 @@
     </folder>
     <file name="index.html" crc="3624373" seo="true" mt="1519817128108" redirect="true"/>
   </folder>
-  <file name="index.html" crc="42857430" seo="true" mt="1519817127948" redirect="true"/>
+  <file name="index.html" crc="346924490" seo="true" mt="1519822586872" redirect="true"/>
 </manifest>
