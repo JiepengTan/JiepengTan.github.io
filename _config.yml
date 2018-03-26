@@ -8,8 +8,7 @@
 # Site settings
 title: FishMan的技术专栏
 brief-intro: Game Developer/Technical Artist
-#baseurl: "" # the subpath of your site, e.g. /blog
-baseurl: "/jiepengtan.github.io" 
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jiepengtan.github.io" # the base hostname & protocol for your site
 
 
