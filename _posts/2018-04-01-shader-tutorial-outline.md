@@ -34,7 +34,7 @@ Shader教程总纲
 
 #2.**实例**
  1. **2D Shader基础**
-    - 雪花
+    - [雪花][2]
     - 火焰粒子
     - 下雨
     - 火焰
@@ -52,10 +52,13 @@ Shader教程总纲
 
 #3.推荐
 
- 1. [shadertoy地址][2]
- 2. [教程的项目下载地址][3]
+ 1. [shadertoy地址][3]
+ 2. [教程的项目下载地址][4]
  
 ----------
+
+
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
-  [2]: https://www.shadertoy.com/user/FishMan
-  [3]: https://github.com/JiepengTan/FishManShaderTutorial
+  [2]: https://jiepengtan.github.io/2018/04/01/shader-tutorial-snow/
+  [3]: https://www.shadertoy.com/user/FishMan
+  [4]: https://github.com/JiepengTan/FishManShaderTutorial
