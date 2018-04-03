@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "ShaderTutorial 总纲"
-date:   2018-04-01 16:09:03
+title:  "ShaderTutorial00 总纲"
+date:   2018-03-26 16:09:03
 author: Jiepeng Tan
 categories: 
  - shader tutorial
@@ -24,8 +24,8 @@ Shader教程总纲
  - 基本图形2D 
  - 基本图形3D(raymarch) 
  - shader技巧 空间划分 
- - shader技巧 颜色空间
  - shader技巧 Noise 和 FBM 
+ - shader技巧 颜色空间
  - shader技巧 用于计算 
  - shader技巧 特效中shader的运用
 
@@ -40,10 +40,10 @@ Shader教程总纲
     - 火焰
     - 2D海洋
  2. **3D Shader**
-    - GameUI 血瓶
-    - 大海
-    - 山脉
     - 泡泡
+    - GameUI 血瓶
+    - 山脉
+    - 大海
  3. **shader技术整合**
     - GameUI 血瓶
     - 池塘
