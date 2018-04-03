@@ -80,6 +80,7 @@ float val = smoothstep(circleSize,-circleSize,r);
 float3 col = float3(val,val,val)* rgrid.x ;
 ```
 <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid04.jpg" width="256">
+
 **5.添加不同的layer**
 针对不同的layer 需要调节的参数有
 
