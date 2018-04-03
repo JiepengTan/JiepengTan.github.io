@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial07 shader技巧 用于计算"
+title:  "中级Shader教程07 shader技巧 用于计算"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

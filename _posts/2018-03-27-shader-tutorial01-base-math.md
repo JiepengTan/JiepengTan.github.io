@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial01 基本数学函数"
+title:  "中级Shader教程01 基本数学函数"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

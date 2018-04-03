@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial12 2D下雨"
+title:  "中级Shader教程12 2D下雨"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

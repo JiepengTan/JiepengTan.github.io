@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial08 shader技巧 特效中shader的运用"
+title:  "中级Shader教程08 shader技巧 特效中shader的运用"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

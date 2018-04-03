@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial11 2D海洋"
+title:  "中级Shader教程11 2D海洋"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

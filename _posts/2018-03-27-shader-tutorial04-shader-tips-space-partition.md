@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial04 shader技巧 空间划分"
+title:  "中级Shader教程04 shader技巧 空间划分"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

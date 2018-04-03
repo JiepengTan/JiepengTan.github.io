@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial00 总纲"
+title:  "中级Shader教程00 总纲"
 date:   2018-03-26 16:09:03
 author: Jiepeng Tan
 categories: 

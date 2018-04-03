@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial03 基本图形3D(raymarch) "
+title:  "中级Shader教程03 基本图形3D(raymarch) "
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

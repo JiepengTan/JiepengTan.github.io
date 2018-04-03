@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial02 基本图形2D"
+title:  "中级Shader教程02 基本图形2D"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

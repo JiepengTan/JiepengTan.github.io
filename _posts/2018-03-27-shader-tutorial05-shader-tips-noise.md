@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial05 shader技巧 Noise 和 FBM"
+title:  "中级Shader教程05 shader技巧 Noise 和 FBM"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

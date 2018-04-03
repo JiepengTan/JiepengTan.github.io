@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial09 2D雪花"
+title:  "中级Shader教程09 2D雪花"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

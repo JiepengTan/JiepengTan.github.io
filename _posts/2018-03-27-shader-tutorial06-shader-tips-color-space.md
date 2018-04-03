@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial06 shader技巧 颜色空间"
+title:  "中级Shader教程06 shader技巧 颜色空间"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

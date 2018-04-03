@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial12 泡泡"
+title:  "中级Shader教程12 泡泡"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 

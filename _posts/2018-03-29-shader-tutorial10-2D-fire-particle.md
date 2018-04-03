@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ShaderTutorial10 2D火焰粒子"
+title:  "中级Shader教程10 2D火焰粒子"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 
