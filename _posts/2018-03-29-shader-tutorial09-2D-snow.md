@@ -11,35 +11,18 @@ mathjax: true
 ---
 <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/snow.gif" width="256">
 
-Shader教程开篇，希望大家会喜欢。
+Shader教程第一个实例，希望大家会喜欢。
 
 
 
-# 1.技巧总结：
 
- - 2D模拟3D注意事项
- - 格子化空间划分 
+# 1.原理：
 
-# 2.基本理论：
-#### 1.**透视效果分析**
+在[中级Shader教程02 基本图形2D][1]中介绍了2D模拟3D中的一些小技巧，这里用到了透视以及空间划分的概念，这里将不再重复：
 
-使用2D模拟3D需要考虑透视问题，如下图：
-<img src="https://jiepengtan.github.io/assets/img/blog/ShaderTutorial2D/Snow/perspective.jpg" width="512">
-
-总体有以下几点：
-
->1. 前景看到的东西会比较**大** 
->2. 前景看到的东西会比较**少** 
->3. 前景看到的物体会比较**清晰**(模拟现实)
-
-
-#### 2.**格子化空间划分**
-
->程序实现对多个物体进行属性修改或创建的时候，往往会用到for循环，但是在shader中，for循环是每个pixel都要执行的，效率很低，而且从另外的角度来看，一个屏幕有大量的pixel，这本身就是一种潜在的大循环。所以在2D shader中for循环是被类似"pixel划分整个屏幕"这种空间划分的技巧所代替。(ps：3D中是对整个世界空间进行格子划分来实现for循环)
-
-# 3.分析：
+# 2.分析：
 >ps:后面()中的数字表示前面透视中的特点
-
+根据 中级Shader教程02 基本图形2D中介绍了相应的一些概念
 将上述知识具体到观察下雪这各场景中：
 >1. 雪花前面的大点(1)
 >2. 雪花前面的少点(2)
@@ -51,39 +34,108 @@ Shader教程开篇，希望大家会喜欢。
 >6. 雪花的空间分布比较随机
 >7. 雪花的下落过程的可能会左右移动
 
-# 4.代码实现：
+# 3.代码实现：
 
-**1.绘制圆点**
+
+**1.空间划分**
+
 ```c
-//假设uv 是 (-0.5,-0.5) 到(.5,0.5)
-//blur 是模糊程度 值越大边缘越模糊 0.0完全不模糊 1.0为正常模糊 负数 反向
-inline float DrawCircle(float2 uv,float blur){
-	float val = 1.0-length(uv);
-	val = smoothstep(0.5,0.500001+blur*0.5,val);
-	return val;
-}
+uv *=10;//将uv放大后frac
+uv = frac(uv);
+uv-=0.5；
 ```
 
-下面是从左到右依次为 blur=-0.1   blur=0.0   blur=0.1  blur=1.0的图像：
+<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid00.jpg" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle-01.jpg" width="128">   <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle00.jpg" width="128">     <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle01.jpg" width="128">  <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle10.jpg" width="128">          
-
-
-**2.下降**
-
-**3.空间划分**
-
-**4.多层模拟**
-
-**5.添加透视特点**
-
-
-图片范例
+**2.添加随机值**
+```c
+fixed2 Rand22(fixed2 co){
+	fixed x = frac(sin(dot(co.xy ,fixed2(122.9898,783.233))) * 43758.5453);
+	fixed y = frac(sin(dot(co.xy ,fixed2(457.6537,537.2793))) * 37573.5913);
+	return fixed2(x,y);
+}
+fixed2 r = Rand22(floor(uv));
+col = fixed3(r,0.0);
+```
 <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid01.jpg" width="256">
+
+**3.uv偏移**
+```c
+float2 rgrid = Rand22(floor(uv));//0~1.0
+uv = frac(uv);
+uv -= (rgrid*2.0-1.0) * 0.35;
+uv -=0.5;
+```
 <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid02.jpg" width="256">
+
+**4.绘制基本图形**
+```c
+float r = length(uv);
+```
 <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid03.jpg" width="256">
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/snow.gif" width="256">
+```c
+float r = length(uv);
+float circleSize = 0.3;
+float val = smoothstep(circleSize,-circleSize,r);
+float3 col = float3(val,val,val)* rgrid.x ;
+```
+<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid04.jpg" width="256">
+**5.添加不同的layer**
+针对不同的layer 需要调节的参数有
 
-[教程的项目下载地址][1]
+ 1. 格子数量
+ 2. y轴移动速度
+ 3. x轴移动速度
+ 4. 格子的随机值
 
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
+```c
+#define SIZE_RATE 0.1
+#define YSPEED 0.5
+#define XSPEED 0.2
+#define LAYERS 10
+float Rand11(float x){
+	return frac(sin(x*157.1147) * 43751.1353);
+}
+fixed2 Rand22(fixed2 co){
+	fixed x = frac(sin(dot(co.xy ,fixed2(1232.9898,7183.233))) * 43758.5453);
+	fixed y = frac(sin(dot(co.xy ,fixed2(4577.6537,5337.2793))) * 37573.5913);
+	return fixed2(x,y);
+}
+float3 SnowSingleLayer(float2 uv,float layer){
+	float time = _Time.y;
+	fixed3 acc = fixed3(0.0,0.0,0.0);
+	uv = uv * (2.0+layer);//透视视野变大效果
+    float xOffset = uv.y * (((Rand11(layer)*2-1.)*0.5+1.)*XSPEED);//增加x轴移动
+    float yOffset = (YSPEED*time);//y轴下落过程
+	uv += fixed2(xOffset,yOffset);
+	float2 rgrid = Rand22(floor(uv)+(31.1759*layer));
+	uv = frac(uv);
+	uv -= (rgrid*2-1.0) * 0.35;
+	uv -=0.5;
+	float r = length(uv);
+	float circleSize = 0.05*(1.0+0.3*sin(time*SIZE_RATE));//让大小变化点
+	float val = smoothstep(circleSize,-circleSize,r);
+	float3 col = float3(val,val,val)* rgrid.x ;
+	return col;
+}
+float3 Snow(float2 uv){
+	float3 acc = float3(0,0,0);
+	for (fixed i=0.;i<LAYERS;i++) {
+		acc += SnowSingleLayer(uv,i); 
+	}
+	return acc;
+}
+fixed4 ProcessFrag(v2f input)  {
+	return float4(Snow(input.uv),1.0);
+}
+```
+最终效果
+
+<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/snow.gif" width="512">
+
+
+[教程的项目下载地址][2]
+
+
+  [1]: https://jiepengtan.github.io/2018/03/27/shader-tutorial02-base_graph2d/
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
