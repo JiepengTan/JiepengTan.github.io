@@ -24,7 +24,7 @@ Shader教程开篇，希望大家会喜欢。
 #### 1.**透视效果分析**
 
 使用2D模拟3D需要考虑透视问题，如下图：
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/perspective.jpg" width="512">
+<img src="https://jiepengtan.github.io/assets/img/blog/ShaderTutorial2D/Snow/perspective.jpg" width="512">
 
 总体有以下几点：
 
