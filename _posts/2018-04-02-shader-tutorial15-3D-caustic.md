@@ -107,8 +107,9 @@ float CausticRotateMin(float2 uv, float time){
 
 
 ### 3.基于Voronoi算法
-voronoi的基本效果图如下：  
-<img src="http://127.0.0.1:4000/assets/img/blog/Base/Voronoi/head.gif" width="256">
+voronoi的基本效果图如下：    
+<img src="http://127.0.0.1:4000/assets/img/blog/Base/Voronoi/head.gif" width="256">  
+
 本身就很类似水底光影效果了。如果让这边缘变化更加丰富点就更好了，voronoi本身也是noise算法的一种，所以我们直接可以联想到FBM,基于这个想法就得到了上面第二种效果  
 源码：
 ```c
@@ -159,7 +160,7 @@ float CausticVoronoi(float2 p,float time) {
 .上面的算法  
 .FBM(Fractional brownian motion)  
 .Iterated Function Systems 如Mandelbrot Set,KaliSet  
-.复杂的水的波的合成
+.复杂的水的波的合成  
 甚至泰勒公式从某种程度上来说也是类似的  
  
 这个技巧非常重要，利用它，我们可以实现的效果就非常的多，如后面我们要实现的海洋，大风，云，山脉
