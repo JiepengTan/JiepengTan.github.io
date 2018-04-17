@@ -24,7 +24,10 @@ mathjax: true
 <p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/GameHPUI/palettes.jpg" width="512"/></p>
 <p align="center"></p>  
 比如彩虹的颜色公式：
->fragColor =  .6 + .6 * cos( 6.3 *  fragCoord.x / iResolution.x *2. + vec4(0,23,21,0)  );  
+>col =  .6 + .6 * cos( 6.3 *  uv.y / _ScreenParam.y *2. + float4(0,23,21,0)  );  
+
+<p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/GameHPUI/rainbow.png" width="512"/></p>
+<p align="center"></p>  
 
 **2.绘制高光**  
 一个小圆减去一个大圆就是一个月牙弧，如果要调整弧度，可以改变两个圆之间的大小比例，位置偏移。如果圆无法满足要求，则使用椭圆来进行集合操作  
