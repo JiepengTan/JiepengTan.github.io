@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程01 基本数学函数"
+title:  "中级Shader教程01 基础函数"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 
@@ -14,6 +14,8 @@ TODO
 基础函数: Smoothstep Sin Clamp Pow Length Sqrt 
 辅助函数: Saw WithIn Remap
 图形: Circle Rect 
+
+
 
 
 
