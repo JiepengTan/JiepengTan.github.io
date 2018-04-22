@@ -10,7 +10,7 @@ img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/head.gif" width="768">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768">
 
 
 
@@ -64,7 +64,7 @@ float3 CausticTriTwist(float2 uv,float time )
 3.多层数值叠加 如图三    
 4.亮度调整 配色   
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri0.jpg" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri1.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri2.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri0.jpg?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri1.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_tri2.gif?raw=true" width="256">
 
 ### 2.基于连续空间旋转min叠加
 上面第3种效果  
@@ -99,16 +99,16 @@ float CausticRotateMin(float2 uv, float time){
 ```
 
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot1.gif" width="256"><img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot2.gif" width="256"><img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot3.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot1.gif?raw=true" width="256"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot2.gif?raw=true" width="256"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot3.gif?raw=true" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot4.gif" width="256"><img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot5.gif" width="256"><img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot6.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot4.gif?raw=true" width="256"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot5.gif?raw=true" width="256"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot6.gif?raw=true" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot7.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/caustic_rot7.gif?raw=true" width="256">
 
 
 ### 3.基于Voronoi算法
 voronoi的基本效果图如下：    
-<img src="http://127.0.0.1:4000/assets/img/blog/Base/Voronoi/head.gif" width="256">  
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/Base/Voronoi/head.gif?raw=true" width="256">  
 
 本身就很类似水底光影效果了。如果让这边缘变化更加丰富点就更好了，voronoi本身也是noise算法的一种，所以我们直接可以联想到FBM,基于这个想法就得到了上面第二种效果  
 源码：

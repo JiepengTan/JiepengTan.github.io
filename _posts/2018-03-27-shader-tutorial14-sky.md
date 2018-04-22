@@ -8,7 +8,7 @@ categories:
 tags: shader_tutorial shader sky noise cloud
 mathjax: true
 ---
-<p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Sky/head.gif" width="512"/></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sky/head.gif?raw=true" width="512"/></p>
 <p align="center"></p>  
 
 

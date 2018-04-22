@@ -76,17 +76,17 @@ mathjax: true
 
 ### **6.部分效果图：**
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/head.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/GameHPUI/game_hp_ui.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/head.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/game_hp_ui.gif?raw=true" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Sea/sea.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/FireParticle/fire_particle.gif" width="256"> 
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Sea/sea.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/fire_particle.gif?raw=true" width="256"> 
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Rain/head.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Sky/head.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Rain/head.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sky/head.gif?raw=true" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Stars/head.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Lake/head.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Stars/head.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Lake/head.gif?raw=true" width="256">
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Fog/head.gif" width="256"> <img src="http://127.0.0.1:4000/assets/img/blog/JobSys/head.gif" width="256"> 
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Fog/head.gif?raw=true" width="256"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/JobSys/head.gif?raw=true" width="256"> 
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Caustic/head.gif" width="768">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768">
  
 ----------
 

@@ -38,43 +38,46 @@ mathjax: true
 
 ### **范例中包含新的特性有** 
 
-####1.Raymarching a simple scene
+#### 1.Raymarching a simple scene
 > .raymarching
 
-####2.Raymarching 基本框架
+#### 2.Raymarching 基本框架
 > .框架抽取
 
-####3.SDF提要
+#### 3.SDF提要
 > .SDF
 
-####4.Stars
+#### 4.Stars
 > .极坐标空间划分
 > 
-####5.BounceBalls
+#### 5.BounceBalls
 > .笛卡尔坐标空间划分
 
-####6.Mountain
+#### 6.Mountain
 >. FBM 用于高度
 
-####7.Fog
+#### 7.Sky
 >. FBM 用于密度
 
-####8.Cloud
+#### 7.Fog
+>. FBM 用于密度
+
+#### 8.Cloud
 > .FBM 用于密度
 > .多层透明混合
 
-####9.Sea
+#### 9.Sea
 > .wave 合成的多种方式
 
-####10.Lake
+#### 10.Lake
 > .法线柔和过渡
 > .raymarching 中折射反射的实现
 
-####11.水底世界
+#### 11.水底世界
 > .godray
 > ."凑"字决
 
-####12.地平线
+#### 12.地平线
 > ."凑"字决
 
 

@@ -29,7 +29,7 @@ uv = frac(uv);
 ```
 
 如下：从左到右一次为原始uv，grid后的uv,以及根据grid后的uv绘制的圆
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/offset_uv.jpg" width="128"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/grid_offset_uv.jpg" width="128"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/grid_uv_circle.jpg" width="128">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/offset_uv.jpg?raw=true" width="128"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/grid_offset_uv.jpg?raw=true" width="128"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/grid_uv_circle.jpg?raw=true" width="128">
 
 #### **2.每个grid获取ID**
 ```c
@@ -48,14 +48,14 @@ sin(x*bigVal1) 会将x值的变化波动被放大，且随机，设这个值的�
 fixed2 r = Rand22(floor(uv));
 col = fixed3(r,0.0);
 ```
- <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/grid_rand_val.jpg" width="128">
+ <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/grid_rand_val.jpg?raw=true" width="128">
  
 
 
 ### **2.透视效果分析**
 
 使用2D模拟3D需要考虑透视问题，如下图：
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/perspective.jpg" width="512">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/perspective.jpg?raw=true" width="512">
 
 总体有以下几点：
 

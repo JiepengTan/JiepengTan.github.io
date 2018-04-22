@@ -8,7 +8,7 @@ categories:
 tags: shader_tutorial UI shader fog noise
 mathjax: true
 ---
-<p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Fog/head.gif" width="512"/></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Fog/head.gif?raw=true" width="512"/></p>
 <p align="center"></p>  
 
 
@@ -52,7 +52,7 @@ float tnoise(in float3 p, float time,float spd)
 
 整个场景中Noise 分布 效果如下
 
-<p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Fog/noise.gif" width="512"/></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Fog/noise.gif?raw=true" width="512"/></p>
 <p align="center"></p>  
 
 ### **2.FBM +Raymarch**   

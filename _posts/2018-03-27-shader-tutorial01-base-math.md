@@ -33,7 +33,7 @@ inline float DrawCircle(float2 uv,float blur){
 
 下面是从左到右依次为 blur=-0.1   blur=0.0   blur=0.1  blur=1.0的图像：
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle-01.jpg" width="128">   <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle00.jpg" width="128">     <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle01.jpg" width="128">  <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/BaseMath/circle10.jpg" width="128">          
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/circle-01.jpg?raw=true" width="128">   <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/circle00.jpg?raw=true" width="128">     <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/circle01.jpg?raw=true" width="128">  <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/circle10.jpg?raw=true" width="128">          
 
 
 **随机值**

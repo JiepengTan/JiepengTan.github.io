@@ -9,7 +9,7 @@ tags: shader_tutorial snow grid shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/snow.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/snow.gif?raw=true" width="256">
 
 Shader教程第一个实例，希望大家会喜欢。
 
@@ -45,7 +45,7 @@ uv = frac(uv);
 uv-=0.5；
 ```
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid00.jpg" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid00.jpg?raw=true" width="256">
 
 **2.添加随机值**
 ```c
@@ -57,7 +57,7 @@ fixed2 Rand22(fixed2 co){
 fixed2 r = Rand22(floor(uv));
 col = fixed3(r,0.0);
 ```
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid01.jpg" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid01.jpg?raw=true" width="256">
 
 **3.uv偏移**
 ```c
@@ -66,20 +66,20 @@ uv = frac(uv);
 uv -= (rgrid*2.0-1.0) * 0.35;
 uv -=0.5;
 ```
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid02.jpg" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid02.jpg?raw=true" width="256">
 
 **4.绘制基本图形**
 ```c
 float r = length(uv);
 ```
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid03.jpg" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid03.jpg?raw=true" width="256">
 ```c
 float r = length(uv);
 float circleSize = 0.3;
 float val = smoothstep(circleSize,-circleSize,r);
 float3 col = float3(val,val,val)* rgrid.x ;
 ```
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/grid04.jpg" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid04.jpg?raw=true" width="256">
 
 **5.添加不同的layer**
 针对不同的layer 需要调节的参数有
@@ -132,7 +132,7 @@ fixed4 ProcessFrag(v2f input)  {
 ```
 最终效果
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Snow/snow.gif" width="512">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/snow.gif?raw=true" width="512">
 
 
 [教程的项目下载地址][2]

@@ -10,7 +10,7 @@ img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
 
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/FireParticle/fire_particle.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/fire_particle.gif?raw=true" width="256">
 //TODO 
 
 

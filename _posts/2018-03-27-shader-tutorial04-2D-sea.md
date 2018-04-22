@@ -10,7 +10,7 @@ img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
  <p align="center">
-<img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial2D/Sea/head.gif" width="512"></p> 
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Sea/head.gif?raw=true" width="512"></p> 
 
 **本篇主要技术点有：**  
 1. sin波函数的理解和应用  

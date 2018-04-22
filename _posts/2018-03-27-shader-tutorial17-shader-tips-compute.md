@@ -9,7 +9,7 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-<img src="http://127.0.0.1:4000/assets/img/blog/JobSys/partilcle.gif" width="256">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/JobSys/partilcle.gif?raw=true" width="256">
 ### **粒子大规模渲染优化** 
 ### **0.优化总览**
 

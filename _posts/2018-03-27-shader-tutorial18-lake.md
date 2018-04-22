@@ -1,18 +1,16 @@
 ---
 layout: post
-title:  "中级Shader教程13 Stars"
+title:  "中级Shader教程13 Lake"
 date:   2018-04-13 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
-tags: shader_tutorial shader sky stars
+tags: shader_tutorial shader sky water lake mountain flare
 mathjax: true
 ---
-<p align="center"> <img src="http://127.0.0.1:4000/assets/img/blog/ShaderTutorial3D/Stars/head.gif" width="512"/></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Stars/head.gif?raw=true" width="512"/></p>
 <p align="center"></p>  
 
-
- 
 
 
 ### 1.实现原理  
