@@ -87,36 +87,41 @@ float3 col = float3(val,val,val)* rgrid.x ;
 3.x轴移动速度  
 4.格子的随机值  
 
+基本属性定义
 ```c
-#define SIZE_RATE 0.1
-#define YSPEED 0.5
-#define XSPEED 0.2
-#define LAYERS 10
-float Rand11(float x){
-	return frac(sin(x*157.1147) * 43751.1353);
-}
-fixed2 Rand22(fixed2 co){
-	fixed x = frac(sin(dot(co.xy ,fixed2(1232.9898,7183.233))) * 43758.5453);
-	fixed y = frac(sin(dot(co.xy ,fixed2(4577.6537,5337.2793))) * 37573.5913);
-	return fixed2(x,y);
-}
-float3 SnowSingleLayer(float2 uv,float layer){
-	float time = _Time.y;
-	fixed3 acc = fixed3(0.0,0.0,0.0);
-	uv = uv * (2.0+layer);//透视视野变大效果
-    float xOffset = uv.y * (((Rand11(layer)*2-1.)*0.5+1.)*XSPEED);//增加x轴移动
-    float yOffset = (YSPEED*time);//y轴下落过程
-	uv += fixed2(xOffset,yOffset);
-	float2 rgrid = Rand22(floor(uv)+(31.1759*layer));
-	uv = frac(uv);
-	uv -= (rgrid*2-1.0) * 0.35;
-	uv -=0.5;
-	float r = length(uv);
-	float circleSize = 0.05*(1.0+0.3*sin(time*SIZE_RATE));//让大小变化点
-	float val = smoothstep(circleSize,-circleSize,r);
-	float3 col = float3(val,val,val)* rgrid.x ;
-	return col;
-}
+		SIZE_RATE ("SIZE_RATE", float) = 0.1
+		XSPEED ("XSPEED", float) = 0.2
+		YSPEED ("YSPEED", float) = 0.5
+		LAYERS ("LAYERS", float) = 10
+```
+
+
+```c
+		float3 SnowSingleLayer(float2 uv,float layer){
+				fixed3 acc = fixed3(0.0,0.0,0.0);//让雪花的大小变化
+				uv = uv * (2.0+layer);//透视视野变大效果
+			    float xOffset = uv.y * (((Hash11(layer)*2-1.)*0.5+1.)*XSPEED);//增加x轴移动
+			    float yOffset = (YSPEED*ftime);//y轴下落过程
+				uv += fixed2(xOffset,yOffset);
+				float2 rgrid = Hash22(floor(uv)+(31.1759*layer));
+				uv = frac(uv);
+				uv -= (rgrid*2-1.0) * 0.35;
+				uv -=0.5;
+				float r = length(uv);
+				float circleSize = 0.05*(1.0+0.3*sin(ftime*SIZE_RATE));//让大小变化点
+				float val = smoothstep(circleSize,-circleSize,r);
+				float3 col = float3(val,val,val)* rgrid.x ;
+				return col;
+			}
+		
+	    ENDCG
+	}//end pass
+  }//end SubShader
+}//end Shader
+```
+
+1.多层绘制
+```c
 float3 Snow(float2 uv){
 	float3 acc = float3(0,0,0);
 	for (fixed i=0.;i<LAYERS;i++) {
@@ -124,12 +129,7 @@ float3 Snow(float2 uv){
 	}
 	return acc;
 }
-fixed4 ProcessFrag(v2f input)  {
-	return float4(Snow(input.uv),1.0);
-}
 ```
-
-
 
 - [本教程配套项目源码 ][1]
 - [本人shadertoy地址 ][2]
