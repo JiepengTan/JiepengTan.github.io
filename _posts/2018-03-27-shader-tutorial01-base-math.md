@@ -15,6 +15,7 @@ mathjax: true
 
 
 
+以下实例的图片依次对上面图片中应笛卡尔坐标行列。
 ### **shader中函数的基本理解**  
  > 1.smoothstep 获取较为平滑的过渡效果length(uv) 降维效果   
  > 2.length(uv)将2D的转换为1D    
@@ -73,7 +74,7 @@ float3 DrawStrongCircle(float2 uv){
 }
 ```
 
-**6.pow eg:跳动的小球**  
+**6.sin eg:跳动的小球**  
 sin函数给2D小球y轴上的移动  
 ```c
 float3 DrawBounceBall(float2 uv){
@@ -85,7 +86,7 @@ float3 DrawBounceBall(float2 uv){
 }
 ```
 
-**7.pow eg:不同颜色的格子**  
+**7.hash eg:不同颜色的格子**  
 本教程中使用的Hash库来自Dave_Hoskin 
 具体实现见Hash.cginc  
 这里给出另外一种使用三角函数实现的Hash：  
@@ -107,7 +108,7 @@ float3 DrawRandomColor(float2 uv){
 }
 ```
 
-**8.pow eg:Perlin Noise展示**  
+**8.noise eg:Perlin Noise展示**  
 本教程中使用的Noise库来自ShaderToy多位作者,具体实现见Noise.cginc  
 
 本教程不再覆盖noise等基础函数的实,原理请参考[candycat这篇blog][4]  
@@ -122,7 +123,7 @@ float3 DrawRandomColor(float2 uv){
 }
 ```
 
-**9.pow eg:PerlinNoise FBM展示**  
+**9.fbm eg:PerlinNoise FBM展示**  
 FBM更多实例请参考[the book of shader][8]  
 
 ```c
