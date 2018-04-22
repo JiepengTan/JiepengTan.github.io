@@ -12,6 +12,11 @@ mathjax: true
  <p align="center">
 <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/head.gif?raw=true" width="512"></p> 
 
+**本篇主要技术点有：**  
+1. grid 空间划分  
+2. 2D模拟3D中"分层"的概念  
+3. 透视模拟
+
 
 
 
@@ -95,7 +100,7 @@ float3 col = float3(val,val,val)* rgrid.x ;
 		LAYERS ("LAYERS", float) = 10
 ```
 
-
+单层绘制
 ```c
 		float3 SnowSingleLayer(float2 uv,float layer){
 				fixed3 acc = fixed3(0.0,0.0,0.0);//让雪花的大小变化
