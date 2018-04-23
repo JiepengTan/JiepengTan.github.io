@@ -19,6 +19,8 @@ mathjax: true
 
 
 
+
+
 ### 1.实现流程
 1.单层noise分布  
  <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/noise.jpg?raw=true" width="256"></p>

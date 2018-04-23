@@ -9,6 +9,10 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
+
+
+
+
 ### **0.2Dshader设计流程**
 >0.确定shader效果  
 1.空间划分  

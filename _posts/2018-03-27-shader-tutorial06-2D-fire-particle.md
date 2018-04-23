@@ -9,7 +9,6 @@ tags: shader_tutorial fire particle grid shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-
  <p align="center">
 <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/head.gif?raw=true" width="256"></p> 
 
@@ -19,6 +18,7 @@ mathjax: true
 3. 透视模拟
 4. 基于grid的随机变化(旋转,位移,闪烁)
 5. sin 周期变化(闪烁)
+
 
 
 
