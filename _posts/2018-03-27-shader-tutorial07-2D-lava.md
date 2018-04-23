@@ -109,12 +109,17 @@ float3 Blackbody(float t)
 }
 ```
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/PlanckianLocus.png/300px-PlanckianLocus.png" width="256">
-空间映射流程:
-温度 -> uv -> xy -> XYZ -> RGB
-具体原理参考：[色温映射][4]
-更多熔岩实现可以参考：
-[这里][5] 和[这里][6]
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/PlanckianLocus.png/300px-PlanckianLocus.png" width="256">  
+
+空间映射流程:  
+温度 -> uv -> xy -> XYZ -> RGB  
+具体原理参考：[色温映射][4]  
+更多熔岩实现可以参考：  
+[这里][5]  
+ <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/ref1..jpg?raw=true" width="256"></p>  
+
+和[这里][6]  
+ <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/ref2.jpg?raw=true" width="256"></p>  
 
 #### 3.整合在一起
 ```c
@@ -136,5 +141,5 @@ float3 ProcessFrag(float2 uv)
   [2]: https://www.shadertoy.com/user/FishMan
   [3]: https://jiepengtan.github.io/ 
   [4]: https://en.wikipedia.org/wiki/Color_temperature
-  [5]: https://www.shadertoy.com/view/XttSRs
-  [6]: https://www.shadertoy.com/view/MdBSRW
+  [5]: https://www.shadertoy.com/view/MdBSRW
+  [6]: https://www.shadertoy.com/view/XttSRs
