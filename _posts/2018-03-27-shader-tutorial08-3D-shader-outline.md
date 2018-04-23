@@ -9,7 +9,7 @@ tags: shader_tutorial theory
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-
+//
 
 
 
@@ -41,10 +41,10 @@ mathjax: true
 ### **范例中包含新的特性有** 
 
 #### 1.Raymarching a simple scene
-> .raymarching
+> .[raymarching][4]
 
 #### 2.Raymarching 基本框架
-> .框架抽取
+> .[框架抽取][4]
 
 #### 3.SDF提要
 > .SDF
@@ -94,4 +94,5 @@ mathjax: true
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
   [2]: https://www.shadertoy.com/user/FishMan
   [3]: https://jiepengtan.github.io/
+  [4]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
 
