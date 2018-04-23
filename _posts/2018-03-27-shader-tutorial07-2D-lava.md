@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程09 2D雪花"
+title:  "中级Shader教程07 熔岩Lava"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 
@@ -9,134 +9,132 @@ tags: shader_tutorial snow grid shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/snow.gif?raw=true" width="256">
+ <p align="center">
+ <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/head.gif?raw=true" width="512"></p>
 
-Shader教程第一个实例，希望大家会喜欢。
-
-
-
-
-# 1.原理：
-
-在[中级Shader教程02 基本图形2D][1]中介绍了2D模拟3D中的一些小技巧，这里用到了透视以及空间划分的概念，这里将不再重复：
-
-# 2.分析：
->ps:后面()中的数字表示前面透视中的特点
-根据 中级Shader教程02 基本图形2D中介绍了相应的一些概念
-将上述知识具体到观察下雪这各场景中：
->1. 雪花前面的大点(1)
->2. 雪花前面的少点(2)
->3. 雪花前面的亮点(3)
-
-其他的特点有：
->4. 整体是向下降落，因为透视关系后面的下降速度慢点(2)
->5. 现实中的雪花的薄厚程度不一
->6. 雪花的空间分布比较随机
->7. 雪花的下落过程的可能会左右移动
-
-# 3.代码实现：
+**本篇主要技术点有：**  
+1. Noise的应用  
+2. FBM的基本应用
+3. 颜色空间映射
 
 
-**1.空间划分**
+
+### 1.实现流程
+1.单层noise分布  
+ <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/noise.jpg?raw=true" width="256"></p>
+2.多层叠加，每层noise添加位移和旋转  
+ <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/fbm.jpg?raw=true" width="256"></p>
+3.色温映射  
+ <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Lava/head.gif?raw=true" width="256"></p>
+### 2.实现
+#### 1.基本形态：  
+1.通过FBM构造基本形态，在FBM添加点变化  
+>1.每一层的移动速度不一样    
+>2.每层的旋转不一样    
+
+2.FBM的其他的应用还有  
+>1.动态雾的密度    
+>2.云层的密度  
+>3.地形高程图  
+>4.大理石纹理    
+>5.3D动态云(fake)的实现原理和这里类似.不过没有添加旋转   
 
 ```c
-uv *=10;//将uv放大后frac
-uv = frac(uv);
-uv-=0.5；
-```
+float _Noise( in float2 x ){ return VNoise(x*0.75);}
 
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid00.jpg?raw=true" width="256">
-
-**2.添加随机值**
-```c
-fixed2 Rand22(fixed2 co){
-	fixed x = frac(sin(dot(co.xy ,fixed2(122.9898,783.233))) * 43758.5453);
-	fixed y = frac(sin(dot(co.xy ,fixed2(457.6537,537.2793))) * 37573.5913);
-	return fixed2(x,y);
+float2 Gradn(float2 p)
+{
+	float ep = .09;
+	float gradx = _Noise(float2(p.x+ep,p.y))-_Noise(float2(p.x-ep,p.y));
+	float grady = _Noise(float2(p.x,p.y+ep))-_Noise(float2(p.x,p.y-ep));
+	return float2(gradx,grady);
 }
-fixed2 r = Rand22(floor(uv));
-col = fixed3(r,0.0);
-```
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid01.jpg?raw=true" width="256">
-
-**3.uv偏移**
-```c
-float2 rgrid = Rand22(floor(uv));//0~1.0
-uv = frac(uv);
-uv -= (rgrid*2.0-1.0) * 0.35;
-uv -=0.5;
-```
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid02.jpg?raw=true" width="256">
-
-**4.绘制基本图形**
-```c
-float r = length(uv);
-```
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid03.jpg?raw=true" width="256">
-```c
-float r = length(uv);
-float circleSize = 0.3;
-float val = smoothstep(circleSize,-circleSize,r);
-float3 col = float3(val,val,val)* rgrid.x ;
-```
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/grid04.jpg?raw=true" width="256">
-
-**5.添加不同的layer**
-针对不同的layer 需要调节的参数有
-
- 1. 格子数量
- 2. y轴移动速度
- 3. x轴移动速度
- 4. 格子的随机值
-
-```c
-#define SIZE_RATE 0.1
-#define YSPEED 0.5
-#define XSPEED 0.2
-#define LAYERS 10
-float Rand11(float x){
-	return frac(sin(x*157.1147) * 43751.1353);
+float FlowFBM(in float2 p)
+{
+	float z=2.;
+	float rz = 0.;
+	float2 bp = p;
+	for (float i= 1.;i < 9.;i++ )
+	{
+		//让不同的层都添加不同的运动速度 形成一种明显的 层次感
+		p += ftime*.0006;
+		bp += ftime*0.00006;
+		//获取梯度
+		float2 gr = Gradn(i*p*1.54+ftime*.14)*4.;
+		//添加旋转 让不同的图层拥有不同的旋转速度，形成整体有扭曲的感觉
+		float2x2 rot = Rot2DRad(ftime*0.6-(0.05*p.x+0.07*p.y)*30.);
+		gr = mul(rot,gr);
+		p += gr*.5;
+		//FBM实现
+		rz+= (sin(_Noise(p)*7.)*0.5+0.5)/z;
+		//插值调整每层之间效果
+		p = lerp(bp,p,.77);
+		//FBM 常规操作
+		z *= 1.4;
+		p *= 2.;
+		bp *= 1.9;
+	}
+	return rz;	
 }
-fixed2 Rand22(fixed2 co){
-	fixed x = frac(sin(dot(co.xy ,fixed2(1232.9898,7183.233))) * 43758.5453);
-	fixed y = frac(sin(dot(co.xy ,fixed2(4577.6537,5337.2793))) * 37573.5913);
-	return fixed2(x,y);
+```
+
+#### 2.颜色映射  
+
+```
+// ...... Taken from https://www.shadertoy.com/view/MdBSRW
+float3 Blackbody(float t)
+{
+	const  TEMPERATURE  = 2200.0;
+	t *= TEMPERATURE;
+
+	float u = ( 0.860117757 + 1.54118254e-4 * t + 1.28641212e-7 * t*t ) 
+			/ ( 1.0 + 8.42420235e-4 * t + 7.08145163e-7 * t*t );
+
+	float v = ( 0.317398726 + 4.22806245e-5 * t + 4.20481691e-8 * t*t ) 
+			/ ( 1.0 - 2.89741816e-5 * t + 1.61456053e-7 * t*t );
+
+	float x = 3.0*u / (2.0*u - 8.0*v + 4.0);
+	float y = 2.0*v / (2.0*u - 8.0*v + 4.0);
+	float z = 1.0 - x - y;
+
+	float Y = 1.0;
+	float X = Y / y * x;
+	float Z = Y / y * z; 
+
+	float3x3 XYZtoRGB = float3x3(3.2404542, -1.5371385, -0.4985314,
+						-0.9692660,  1.8760108,  0.0415560,
+							0.0556434, -0.2040259,  1.0572252);
+
+	return max(float3(0.0,0.,0.), mul(XYZtoRGB,float3(X,Y,Z)) * pow(t * 0.0004, 4.0));
 }
-float3 SnowSingleLayer(float2 uv,float layer){
-	float time = _Time.y;
-	fixed3 acc = fixed3(0.0,0.0,0.0);
-	uv = uv * (2.0+layer);//透视视野变大效果
-    float xOffset = uv.y * (((Rand11(layer)*2-1.)*0.5+1.)*XSPEED);//增加x轴移动
-    float yOffset = (YSPEED*time);//y轴下落过程
-	uv += fixed2(xOffset,yOffset);
-	float2 rgrid = Rand22(floor(uv)+(31.1759*layer));
-	uv = frac(uv);
-	uv -= (rgrid*2-1.0) * 0.35;
-	uv -=0.5;
-	float r = length(uv);
-	float circleSize = 0.05*(1.0+0.3*sin(time*SIZE_RATE));//让大小变化点
-	float val = smoothstep(circleSize,-circleSize,r);
-	float3 col = float3(val,val,val)* rgrid.x ;
+```
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/PlanckianLocus.png/300px-PlanckianLocus.png" width="256">
+空间映射流程:
+温度 -> uv -> xy -> XYZ -> RGB
+具体原理参考：[色温映射][4]
+更多熔岩实现可以参考：
+[这里][5] 和[这里][6]
+
+#### 3.整合在一起
+```c
+float3 ProcessFrag(float2 uv)
+{
+	uv*= _GridSize;
+	float val = FlowFBM(uv);
+	val = Remap(0.,1.,0.6,1.,val);
+	float3 col = Blackbody(val);
 	return col;
 }
-float3 Snow(float2 uv){
-	float3 acc = float3(0,0,0);
-	for (fixed i=0.;i<LAYERS;i++) {
-		acc += SnowSingleLayer(uv,i); 
-	}
-	return acc;
-}
-fixed4 ProcessFrag(v2f input)  {
-	return float4(Snow(input.uv),1.0);
-}
 ```
-最终效果
 
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/snow.gif?raw=true" width="512">
+- [本教程配套项目源码 ][1]
+- [本人shadertoy地址 ][2]
+- [第一时间更新blog地址][3]
 
-
-[教程的项目下载地址][2]
-
-
-  [1]: https://jiepengtan.github.io/2018/03/27/shader-tutorial02-base_graph2d/
-  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [2]: https://www.shadertoy.com/user/FishMan
+  [3]: https://jiepengtan.github.io/ 
+  [4]: https://en.wikipedia.org/wiki/Color_temperature
+  [5]: https://www.shadertoy.com/view/XttSRs
+  [6]: https://www.shadertoy.com/view/MdBSRW

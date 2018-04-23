@@ -113,7 +113,8 @@ float3 col = float3(val,val,val)* rgrid.x ;
 				uv -= (rgrid*2-1.0) * 0.35;
 				uv -=0.5;
 				float r = length(uv);
-				float circleSize = 0.05*(1.0+0.3*sin(ftime*SIZE_RATE));//让大小变化点
+				//让大小变化点
+				float circleSize = 0.05*(1.0+0.3*sin(ftime*SIZE_RATE));
 				float val = smoothstep(circleSize,-circleSize,r);
 				float3 col = float3(val,val,val)* rgrid.x ;
 				return col;

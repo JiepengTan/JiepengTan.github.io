@@ -30,7 +30,7 @@ float2 coord = uv*_GridSize;
 ```
 
  <p align="center">
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/uvgrid.jpg?raw=true" width="256"></p>
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/uvgrid01.jpg?raw=true" width="256"></p>
 
 #### 2.交错grid  
 ```c
