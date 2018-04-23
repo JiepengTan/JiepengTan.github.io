@@ -18,14 +18,13 @@ mathjax: true
 
 
 ### **1.3D Raymarch框架** 
-1.获得相机位置ro
-2.根据相机位置和朝向,计算当前像素所发出的射线ray的方向rd(ray dir)
-3.求交ray和场景的碰撞点p(两种方式)
+>1. 获得相机位置ro
+2. 根据相机位置和朝向,计算当前像素所发出的射线ray的方向rd(ray dir)
+3. 求交ray和场景的碰撞点p(两种方式)
 >3.1 直接算式求解(比如射线到一个简单的圆的交点)
  3.2 使用raymarching方式即一步步的递进ray,直到ray碰到场景，或达到ray的最大距离。
-
-4.求得p处的法线和材质信息
-5.根据4得到的信息求的p处的颜色
+4. 求得p处的法线和材质信息
+5. 根据4得到的信息求的p处的颜色
 
 
 举个Raymarching方式例子：
@@ -320,6 +319,10 @@ Shader "FishManShaderTutorial/RaymarchMergeExample" {
 <p align="center">
 <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/Show/MergeRaymarchExample.gif?raw=true" width="660"></p>  
 
+
+- [本教程配套项目源码 ][1]
+- [本人shadertoy地址 ][2]
+- [第一时间更新blog地址][3]
 
 
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
