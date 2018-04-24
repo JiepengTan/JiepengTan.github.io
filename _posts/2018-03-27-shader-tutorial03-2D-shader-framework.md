@@ -75,21 +75,21 @@ col = fixed3(r,0.0);
 
 ### **3.范例目录**
 接下来的几个粒子都是使用这个套路实现。下面是几个场景中覆盖的知识点：  
-#### 1.2DSea
+#### [1.2DSea][7]
 .length  
 .atan 极坐标  
 .smoothstep  
 .sin cos
 
-#### 2.2DSnow  
+#### [2.2DSnow][8]  
 .hash  
 .空间划分  
 
-#### 3.2DFireParticle  
+#### [3.2DFireParticle ][9] 
 .hash  
 .nois
 
-#### 4.2DLava  
+#### [4.2DLava ][10] 
 .fbm  
 
 ----------
@@ -102,4 +102,13 @@ col = fixed3(r,0.0);
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
   [2]: https://www.shadertoy.com/user/FishMan
   [3]: https://jiepengtan.github.io/
+  [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
+  [5]: https://jiepengtan.github.io/2018/03/27/shader-tutorial02-shader-skills/
+  [6]: https://jiepengtan.github.io/2018/03/27/shader-tutorial03-2D-shader-framework/
+  [7]: https://jiepengtan.github.io/2018/03/27/shader-tutorial04-2D-sea/
+  [8]: https://jiepengtan.github.io/2018/03/27/shader-tutorial05-2D-snow/
+  [9]: https://jiepengtan.github.io/2018/03/27/shader-tutorial06-2D-fire-particle/
+  [10]: https://jiepengtan.github.io/2018/03/27/shader-tutorial07-2D-lava/
+  [11]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
+  [12]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
 

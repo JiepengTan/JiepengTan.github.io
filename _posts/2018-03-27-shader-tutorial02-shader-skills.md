@@ -36,16 +36,16 @@ mathjax: true
 #### 基于格子的随机性
 
 #### 1.空间划分  
-1.雪花
+1.[雪花][8]
 
 #### 2.基于格子的随机性  
-1.雪花
-2.火焰粒子
+1.[雪花][8]
+2.[火焰粒子][9]
 3.BounceBall
 
 #### 3.分层  
-1.雪花
-2.2D海洋
+1.[雪花][8]
+2.[2D海洋][7]
 
 #### 4.类FBM框架    
 #### 5.法线柔和过渡  
@@ -61,4 +61,13 @@ mathjax: true
 
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
   [2]: https://www.shadertoy.com/user/FishMan
-  [3]: https://jiepengtan.github.io/
+  [3]: https://jiepengtan.github.io/ 
+  [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
+  [5]: https://jiepengtan.github.io/2018/03/27/shader-tutorial02-shader-skills/
+  [6]: https://jiepengtan.github.io/2018/03/27/shader-tutorial03-2D-shader-framework/
+  [7]: https://jiepengtan.github.io/2018/03/27/shader-tutorial04-2D-sea/
+  [8]: https://jiepengtan.github.io/2018/03/27/shader-tutorial05-2D-snow/
+  [9]: https://jiepengtan.github.io/2018/03/27/shader-tutorial06-2D-fire-particle/
+  [10]: https://jiepengtan.github.io/2018/03/27/shader-tutorial07-2D-lava/
+  [11]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
+  [12]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
