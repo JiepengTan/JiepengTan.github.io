@@ -47,7 +47,7 @@ mathjax: true
 > .[框架抽取][4]
 
 #### 3.SDF提要
-> .SDF
+> .[SDF][4]
 
 #### 4.Stars
 > .极坐标空间划分
@@ -95,4 +95,5 @@ mathjax: true
   [2]: https://www.shadertoy.com/user/FishMan
   [3]: https://jiepengtan.github.io/
   [4]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
+  [5]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
 
