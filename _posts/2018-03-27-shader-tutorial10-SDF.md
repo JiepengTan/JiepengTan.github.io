@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "中级Shader教程10 shader建模工具--SDF "
-date:   2018-03-27 16:09:03
+date:   2018-04-23 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -36,7 +36,7 @@ SDF (Sign Distance Functions)主要思想是计算点到目标模型的最近距
 ### 3.API  
 代码位于**SDF.cginc**文件中  
 API 沿袭iq的版本.  
-1.基本模型  
+>1.基本模型  
 SdXxx形式  
 2.集合操作  
 OpU,OpI,OpS  
