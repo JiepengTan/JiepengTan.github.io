@@ -31,13 +31,13 @@ mathjax: true
 float3 Stars(in float3 rd,float den,float tileNum)
 {
     float3 c = float3(0.,0.,0.);
-    float3 p = rd;
+    float3 p = rd*tileNum;//空间划分
     float SIZE = 0.5;
     //分多层
     for (float i=0.;i<3.;i++)
     {
-        float3 q = frac(p*tileNum)-0.5;
-        float3 id = floor(p*tileNum);
+        float3 q = frac(p)-0.5;
+        float3 id = floor(p);
         float2 rn = hash33(id).xy;
 
         float size = (hash13(id)*0.2+0.8)*SIZE; 

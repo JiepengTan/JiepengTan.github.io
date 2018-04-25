@@ -27,29 +27,45 @@ mathjax: true
 1.单层FBM中不同的层之间移动速度随时间的偏移  
 
 ```c
-// 通过rd 来进行空间划分 这样在根据相机进行改变
-float3 Stars(in float3 rd,float den,float tileNum)
-{
-    float3 c = float3(0.,0.,0.);
-    float3 p = rd;
-    float SIZE = 0.5;
-    //分多层
-    for (float i=0.;i<3.;i++)
-    {
-        float3 q = frac(p*tileNum)-0.5;
-        float3 id = floor(p*tileNum);
-        float2 rn = hash33(id).xy;
-
-        float size = (hash13(id)*0.2+0.8)*SIZE; 
-        float demp = pow(1.-size/SIZE,.8)*0.45;
-        float val = (sin(_Time.y*31.*size)*demp+1.-demp) * size;
-        float c2 = 1.-smoothstep(0.,val,length(q));//画圆
-        //随机显示 随着深度的层数的增加添加更多的星星 增加每个grid 出现星星的概率
-        c2 *= step(rn.x,(.0005+i*i*0.001)*den);
-        c += c2*(lerp(float3(1.0,0.49,0.1),float3(0.75,0.9,1.),rn.y)*0.25+0.75);//不同的亮度
-        p *= 1.4;//增加grid密度
+// create by JiepengTan 2018-04-14 
+// email: jiepengtan@gmail.com
+Shader "FishManShaderTutorial/SDFBounceBall" {
+    Properties{
+        _MainTex("Base (RGB)", 2D) = "white" {}
     }
-    return c*c*.7;
+    SubShader{
+        Pass {
+            ZTest Always Cull Off ZWrite Off
+            CGPROGRAM
+
+#pragma vertex vert   
+#pragma fragment frag  
+
+#define DEFAULT_MAT_COL
+#define DEFAULT_PROCESS_FRAG
+#include "ShaderLibs/FullFramework3D.cginc"
+
+            fixed SdBounceBalls(fixed3 pos){
+                fixed SIZE = 2.;
+                fixed2 gridSize = fixed2(SIZE,SIZE);
+                fixed rv = Hash12( floor((pos.xz) / gridSize));
+                pos.xz = OpRep(pos.xz,gridSize);
+                fixed bollSize = 0.1;
+                fixed bounceH = .5;
+                return SdSphere(pos- fixed3(0.,(bollSize+bounceH+sin(_Time.y*3.14 + rv*6.24)*bounceH),0.),bollSize);
+            }
+
+            fixed2 Map( in fixed3 pos )
+            {
+                fixed2 res = fixed2( SdPlane(     pos), 1.0 )  ;
+                res = OpU( res, fixed2( SdBounceBalls( pos),1.) );
+                return res;
+            }
+
+            ENDCG
+        }//end pass
+    }//end SubShader
+    FallBack Off
 }
 ```
 
