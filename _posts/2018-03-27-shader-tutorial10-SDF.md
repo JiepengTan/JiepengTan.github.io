@@ -9,12 +9,17 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
+ <p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/SDF/head.gif?raw=true" width="512"></p> 
+
+
+
+
+
+
 ### 1.作用  
 SDF (Sign Distance Functions)主要思想是计算点到目标模型的最近距离.  
 在RayMarching中，如果已知射线点到场景中的左右物体的最短距离，就可以知道我们是否已经碰到的了物体，如果没有碰到场景，可以利用这个信息优化下一步步进的距离。  
-
-
-
 
 
 ### 2.概要  
