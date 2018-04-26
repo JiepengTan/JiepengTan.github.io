@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程13 3d Sky"
-date:   2018-04-16 16:09:03
+title:  "中级Shader教程14 天空渲染"
+date:   2018-04-23 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -9,10 +9,10 @@ tags: shader_tutorial shader sky noise cloud
 mathjax: true
 ---
 <p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sky/head.gif?raw=true" width="512"/></p>
-<p align="center"></p>  
 
 
  
+
 
 
 ### 1.实现原理
@@ -87,8 +87,10 @@ float4 ProcessRayMarch(float2 uv,float3 ro,float3 rd,inout float sceneDep,float4
 
 
 
-### 2.unity shader源码
-shader源码可以在这里[下载][1]
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
-
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework

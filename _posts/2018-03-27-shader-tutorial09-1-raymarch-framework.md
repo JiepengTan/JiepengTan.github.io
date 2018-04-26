@@ -320,13 +320,12 @@ Shader "FishManShaderTutorial/RaymarchMergeExample" {
 <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/Show/MergeRaymarchExample.gif?raw=true" width="660"></p>  
 
 
-- [本教程配套项目源码 ][1]
-- [本人shadertoy地址 ][2]
-- [第一时间更新blog地址][3]
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
-
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
-  [2]: https://www.shadertoy.com/user/FishMan
-  [3]: https://jiepengtan.github.io/
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://github.com/JiepengTan/FishManShaderTutorial/tree/master/Assets/FishManShaderTutorial/Scene/Fog.unity
   [5]: https://github.com/JiepengTan/FishManShaderTutorial/tree/master/Assets/FishManShaderTutorial/Scene/HighlandLake.unity

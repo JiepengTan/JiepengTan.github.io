@@ -87,13 +87,13 @@ mathjax: true
 ----------
 
 ### **7.链接：**
-- [本教程配套项目源码 ][1]
-- [本人shadertoy地址 ][2]
-- [第一时间更新blog地址][3]
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
-  [2]: https://www.shadertoy.com/user/FishMan
-  [3]: https://jiepengtan.github.io/
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
   [5]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
 

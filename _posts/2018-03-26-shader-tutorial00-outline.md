@@ -74,14 +74,15 @@ mathjax: true
 ----------
 
 ### **7.链接：**
-- [本教程配套项目源码 ][1]
-- [本人shadertoy地址 ][2]
-- [第一时间更新blog地址][3]
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 - 如果想学习哪种类型的shader，可以在[这里][14]留言,我优先出留言中的shader的教程
 
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
-  [2]: https://www.shadertoy.com/user/FishMan
-  [3]: https://jiepengtan.github.io/
+
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
   [5]: https://jiepengtan.github.io/2018/03/27/shader-tutorial02-shader-skills/
   [6]: https://jiepengtan.github.io/2018/03/27/shader-tutorial03-2D-shader-framework/

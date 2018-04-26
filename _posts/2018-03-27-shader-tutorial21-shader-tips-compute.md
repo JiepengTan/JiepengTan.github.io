@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程07 shader技巧 用于计算"
-date:   2018-03-27 16:09:03
+title:  "中级Shader教程21 优化:用shader分摊CPU压力"
+date:   2018-04-25 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -9,7 +9,9 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/JobSys/partilcle.gif?raw=true" width="256">
+<p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/JobSys/head.gif?raw=true" width="256"></p>
+
 ### **粒子大规模渲染优化** 
 ### **0.优化总览**
 
@@ -17,20 +19,20 @@ mathjax: true
 
 **动画系统的优化**  
 1.DrawCall的减少  
-.    Batch  单个模型顶点数量太多，可以合批的数量不多  
-.    GPUInstance 手游限制  
+　　　Batch  单个模型顶点数量太多，可以合批的数量不多  
+　　　GPUInstance 手游限制  
 
 2.负载的均衡  
-.    CPU:可以通过预计算缓存的方式来优化如插件[MeshAnimator][1]  
-.    GPU:[GPUSkin][2]的方式进行优化  
+　　　CPU:可以通过预计算缓存的方式来优化如插件[MeshAnimator][4]  
+　　　GPU:[GPUSkin][5]的方式进行优化  
 
 **粒子系统的优化**  
 1.DrawCall的减少  
-.    Batch  单个模型顶点数量少，手游重点优化范式  
-.    GPUInstance 手游限制  
+　　　Batch  单个模型顶点数量少，手游重点优化范式  
+　　　GPUInstance 手游限制  
 2.负载的均衡  
-.    CPU:在Unity2018版本中可以使用ECS+JobSystem这个大杀器  
-.    GPU:使用shader来批量计算针对单个粒子的信息如位置，旋转，生命期等  
+　　　CPU:在Unity2018版本中可以使用ECS+JobSystem这个大杀器  
+　　　GPU:使用shader来批量计算针对单个粒子的信息如位置，旋转，生命期等  
        
 
 
@@ -57,16 +59,16 @@ mathjax: true
 ### **2.运算优化**
 
 #### 0.整个框架
-0. Editor  
-将众多小模型合并为一个大模型，并在顶点信息中写入ID  
-1. Init  
-初始化 创建贴图 FilterMode.Point，TextureWrapMode.Clamp  
-2. Update data info  
-**不同的方案在这里不同**  
-3. Render in shader  
-1.从顶点信息中获取所属particle的ID  
-2.通过ID计算所需信息在贴图中的下标  
-3.获取并应用该信息  
+0.Editor  
+　　　将众多小模型合并为一个大模型，并在顶点信息中写入ID  
+1.Init  
+　　　初始化 创建贴图 FilterMode.Point，TextureWrapMode.Clamp  
+2.Update data info  
+　　　**不同的方案在这里不同**  
+3.Render in shader  
+　　　1.从顶点信息中获取所属particle的ID  
+　　　2.通过ID计算所需信息在贴图中的下标  
+　　　3.获取并应用该信息  
 
 范例shader：
 ```c
@@ -336,5 +338,13 @@ SwapBuffer();
 ```
 
 
-  [1]: https://www.assetstore.unity3d.com/#!/content/26009
-  [2]: https://github.com/chengkehan/GPUSkinning
+  - [本教程配套blog ][1]
+  - [本教程配套项目源码 ][2]
+  - [教程中抽取的RayMarching框架][3]
+
+
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
+  [4]: https://www.assetstore.unity3d.com/#!/content/26009
+  [5]: https://github.com/chengkehan/GPUSkinning
