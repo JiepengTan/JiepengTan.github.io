@@ -17,6 +17,14 @@ mathjax: true
 
 如果你觉得本教程有用，就去[github][1]中给我颗星星⭐吧.
 
+- [本教程配套blog ][1]  
+- [本教程配套项目源码 ][2]  
+- [教程中抽取的RayMarching框架][3]  
+- [本人shadertoy地址 ][25]  
+- [第一时间更新blog地址][26]  
+- 如果想学习哪种类型的shader，可以在[这里][1]留言,我优先出留言中的shader的教程  
+
+
 ### **1.内容**：
 >1. 教程中会讲解在编写shader的常用技巧，以及在项目中如何使用这些shader
 >2. 大量的实例如水，火，粒子，海洋，山脉，闪电等
@@ -123,4 +131,6 @@ mathjax: true
   [22]: https://jiepengtan.github.io/2018/04/23/shader-tutorial19-fog/
   [23]: https://jiepengtan.github.io/2018/04/23/shader-tutorial20-cloud/
   [24]: https://jiepengtan.github.io/2018/04/25/shader-tutorial21-shader-tips-compute/
+  [25]: https://www.shadertoy.com/user/FishMan
+  [26]: https://jiepengtan.github.io/
   
