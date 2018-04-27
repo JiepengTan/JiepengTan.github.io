@@ -127,7 +127,7 @@ mathjax: true
   [18]: https://jiepengtan.github.io/2018/04/23/shader-tutorial15-mountain/
   [19]: https://jiepengtan.github.io/2018/04/23/shader-tutorial16-lake/
   [20]: https://jiepengtan.github.io/2018/04/23/shader-tutorial17-sea/
-  [21]: https://jiepengtan.github.io/2018/04/23/  [12]: shader-tutorial18-mutil_transparent_render/
+  [21]: https://jiepengtan.github.io/2018/04/23/shader-tutorial18-mutil_transparent_render/
   [22]: https://jiepengtan.github.io/2018/04/23/shader-tutorial19-fog/
   [23]: https://jiepengtan.github.io/2018/04/23/shader-tutorial20-cloud/
   [24]: https://jiepengtan.github.io/2018/04/25/shader-tutorial21-shader-tips-compute/
