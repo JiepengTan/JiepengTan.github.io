@@ -32,7 +32,8 @@ mathjax: true
  - [2D shader框架][6]
  - [3D raymarching框架][11]
  - [基本建模SDF][12]
- - 优化:用shader分摊CPU压力
+ - [多层透明叠加渲染][21]
+ - [优化:用shader分摊CPU压力][24]
 
 ----------
 
@@ -46,9 +47,13 @@ mathjax: true
     - 下雨
  2. **3D Shader**
     - [Unity 和 Raymarch 整合][11]
-    - 天空
-    - 地形
-    - 大海
+    - [星空][16]
+    - [天空][17]
+    - [地形][18]
+    - [湖泊][19]
+    - [大海][20]
+    - [雾][22]
+    - [云][23]
  3. **shader技术整合**
     - GameUI 血瓶
     - 荒原湖泊
@@ -58,26 +63,40 @@ mathjax: true
 
 ### **6.部分效果图：**
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/BaseMath/head.gif?raw=true" width="256"></p> 
-<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/head.gif?raw=true" width="256"></p> 
-<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/head.gif?raw=true" width="256"></p>
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Sea/head.gif?raw=true" width="256"></p>
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Snow/head.gif?raw=true" width="256"></p> 
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/FireParticle/head.gif?raw=true" width="256"></p> 
-<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Rain/head.gif?raw=true" width="256"></p> 
-<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sky/head.gif?raw=true" width="256"></p>
+<p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/SDF/head.gif?raw=true" width="512"></p> 
+
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Stars/head.gif?raw=true" width="256"></p> 
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sky/head.gif?raw=true" width="256"></p>
+<p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Mountain/head.gif?raw=true" width="256"></p> 
+
+
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Lake/head.gif?raw=true" width="256"></p>
+<p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sea/head.gif?raw=true" width="256"></p> 
+
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Fog/head.gif?raw=true" width="256"></p> 
+<p align="center">
+<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Cloud/head.gif?raw=true" width="256"></p>   
+
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/JobSys/head.gif?raw=true" width="256"></p> 
 
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/head.gif?raw=true" width="256"></p>
+
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Rain/head.gif?raw=true" width="256"></p> 
+
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768"></p>
- 
 ----------
 
 ### **7.链接：**
 - [本教程配套blog ][1]
 - [本教程配套项目源码 ][2]
 - [教程中抽取的RayMarching框架][3]
-- 如果想学习哪种类型的shader，可以在[这里][14]留言,我优先出留言中的shader的教程
+- 如果想学习哪种类型的shader，可以在[这里][1]留言,我优先出留言中的shader的教程
 
 
   [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
@@ -92,6 +111,16 @@ mathjax: true
   [10]: https://jiepengtan.github.io/2018/03/27/shader-tutorial07-2D-lava/
   [11]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
   [12]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
-  [13]: https://github.com/JiepengTan/Unity-Raymarching-Framework
-  [14]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [13]: https://jiepengtan.github.io/2018/04/23/shader-tutorial10-SDF/
+  [14]: https://jiepengtan.github.io/2018/04/23/shader-tutorial11-default-renderframe/
+  [15]: https://jiepengtan.github.io/2018/04/23/shader-tutorial12-bounced-balls/
+  [16]: https://jiepengtan.github.io/2018/04/23/shader-tutorial13-stars/
+  [17]: https://jiepengtan.github.io/2018/04/23/shader-tutorial14-sky/
+  [18]: https://jiepengtan.github.io/2018/04/23/shader-tutorial15-mountain/
+  [19]: https://jiepengtan.github.io/2018/04/23/shader-tutorial16-lake/
+  [20]: https://jiepengtan.github.io/2018/04/23/shader-tutorial17-sea/
+  [21]: https://jiepengtan.github.io/2018/04/23/  [12]: shader-tutorial18-mutil_transparent_render/
+  [22]: https://jiepengtan.github.io/2018/04/23/shader-tutorial19-fog/
+  [23]: https://jiepengtan.github.io/2018/04/23/shader-tutorial20-cloud/
+  [24]: https://jiepengtan.github.io/2018/04/25/shader-tutorial21-shader-tips-compute/
   
