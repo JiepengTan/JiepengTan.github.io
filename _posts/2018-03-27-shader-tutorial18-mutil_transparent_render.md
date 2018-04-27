@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程16 多层透明叠加渲染"
+title:  "中级Shader教程18 多层透明叠加渲染"
 date:   2018-04-23 16:09:03
 author: Jiepeng Tan
 categories: 

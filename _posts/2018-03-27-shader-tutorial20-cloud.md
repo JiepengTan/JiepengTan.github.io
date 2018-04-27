@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程16.3 3D云"
-date:   2018-03-27 16:09:03
+title:  "中级Shader教程20 3D云"
+date:   2018-04-23 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -135,9 +135,8 @@ float3 RenderCloud(float3 bgCol,float3 ro,float3 rd,float tmax){
   [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
   [5]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/
-  [6]: https://jiepengtan.github.io/2018/04/23/shader-tutorial16-1-mutil_transparent_render/
+  [6]: https://jiepengtan.github.io/2018/04/23/shader-tutorial18-mutil_transparent_render/
   [7]: https://www.shadertoy.com/view/XtS3DD
   [8]: https://www.shadertoy.com/view/XslGRr
-
 
 
