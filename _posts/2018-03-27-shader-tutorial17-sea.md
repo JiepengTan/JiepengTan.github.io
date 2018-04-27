@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程05 shader技巧 Noise 和 FBM"
-date:   2018-03-27 16:09:03
+title:  "中级Shader教程17 海洋渲染"
+date:   2018-04-23 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial

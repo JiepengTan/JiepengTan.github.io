@@ -216,17 +216,17 @@ Shader "FishManShaderTutorial/RayMarchSimpleScene"{
 从相机的参数中我们可以获取rd相关信息,从zbuffer获取的值中我们可以计算得到射线到碰撞点的距离uz(unity z)。结合raymarching 中计算得到的碰撞点到相机的距离rz（ray z）,类似光栅中的ztest,我们比较uz和rz 选取较小的z值对于的shading值。
 
 所以本教程使用的一种实现方式：  
-**1.获取rd**  
+**1.获取rd**    
 通过相机的参数，计算相机近裁减面的四个角到相机的射线，(渲染的是一个四边形)然后通过顶点shader中采样，利用光栅化的过程，硬件加速插值来得到射线rd。  
 
-**2.计算rz**
+**2.计算rz**  
 从unity中获取深度贴图，并采样得到zVal,然后通过投影逆操作，计算得到rz
 ```c
 float depth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv));
 float rz = depth * length(i.interpolatedRay.xyz);//
 ```
 
-**3.获取sceneColor**
+**3.获取sceneColor**  
 从unity中获取ColorBuffer信息(使用 OnRenderImage+RenderTexture)，
 ```c
 float4 ProcessRayMarch(float2 uv,float3 ro,float3 rd,inout float sceneDep,float4 sceneCol);
@@ -271,6 +271,46 @@ void MergeRayMarchingIntoUnity(inout float rz,inout float3 rCol, float unityDep,
     }
 }       
 ```
+
+#### **2.3.raymarching公共代码抽取**  
+1.如在上面框架中描述了基本的raymarching 流程,其中有几个函数是每个raymarching 都共用的，所以这里提取出来几个宏，减少重复代码  
+```c
+//计算法线
+#define _MACRO_CALC_NORMAL(pos,rz, MAP_FUNC)\
+    float2 e = float2(1.0,-1.0)*0.5773*0.002*rz;\
+    return normalize( e.xyy*MAP_FUNC( pos + e.xyy ).x + \
+                        e.yyx*MAP_FUNC( pos + e.yyx ).x + \
+                        e.yxy*MAP_FUNC( pos + e.yxy ).x + \
+                        e.xxx*MAP_FUNC( pos + e.xxx ).x );
+
+//计算shadow
+#define _MACRO_SOFT_SHADOW(ro, rd, maxH,MAP_FUNC) \
+    float res = 1.0;\
+    float t = 0.001;\
+    for( int i=0; i<80; i++ ){\
+        float3  p = ro + t*rd;\
+        float h = MAP_FUNC( p).x;\
+        res = min( res, 16.0*h/t );\
+        t += h;\
+        if( res<0.001 ||p.y> maxH ) break;\
+    }\
+    return clamp( res, 0.0, 1.0 );
+
+//raycast
+#define _MRCRO_RAY_CAST( ro, rd ,tmax,MAP_FUNC)\
+    float t = .1;\
+    float m = -1.0;\
+    for( int i=0; i<256; i++ ) {\
+        float precis = 0.0005*t;\
+        float2 res = MAP_FUNC( ro+rd*t );\
+        if( res.x<precis || t>tmax ) break;\
+        t += 0.8*res.x;\
+        m = res.y;\
+    } \
+    if( t>tmax ) m=-1.0;\
+    return float2( t, m );
+```
+
 
 ###  **3.另外一种3D渲染实现**
 在这个框架的基础上，我们实现上面所提到的使用公式的方式计算ray到场景的碰撞点的方式。
