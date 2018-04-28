@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程07 3种Caustic算法"
-date:   2018-03-27 16:09:03
+title:  "中级Shader教程26 水专题03:三种Caustic实现方式"
+date:   2018-04-26 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -9,8 +9,7 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768">
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768"></p>
 
 
 
@@ -152,6 +151,7 @@ float CausticVoronoi(float2 p,float time) {
     return v;
 }
 ```
+
 ### **4.shader技巧总结 (重点)**
 >如上所述，三种算法的结果的表现有类似的地方，这是一种技巧：  
 1.重复多次类似操作 并收集结果 val1,val2,val3 ...  
@@ -170,8 +170,13 @@ float CausticVoronoi(float2 p,float time) {
 https://www.shadertoy.com/view/MdKXDm  
 https://www.shadertoy.com/view/MdlXz8  
 
-### 6.unity shader源码
-源码可以在这里[下载][1]
+
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
 
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
+  [4]: https://www.shadertoy.com/view/Xsd3DB

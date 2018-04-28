@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "中级Shader教程13 GameUI 血瓶"
-date:   2018-03-27 16:09:03
+title:  "中级Shader教程28 GameUI 血瓶"
+date:   2018-04-26 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
@@ -22,12 +22,11 @@ mathjax: true
 
 更多的颜色变换:
 <p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/palettes.jpg?raw=true" width="512"/></p>
-<p align="center"></p>  
+
 比如彩虹的颜色公式：
 >col =  .6 + .6 * cos( 6.3 *  uv.y / _ScreenParam.y *2. + float4(0,23,21,0)  );  
 
 <p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/rainbow.png?raw=true" width="512"/></p>
-<p align="center"></p>  
 
 **2.绘制高光**  
 一个小圆减去一个大圆就是一个月牙弧，如果要调整弧度，可以改变两个圆之间的大小比例，位置偏移。如果圆无法满足要求，则使用椭圆来进行集合操作  
@@ -35,7 +34,7 @@ mathjax: true
 **3.绘制波浪**  
 使用RayMarch方式在原点绘制一个圆盘，然后通过在y值使用两个sin来合成一个小的wave，将这个渲染的结果通过类似贴图的方式贴在水面之上，通过时间控制其y值偏移即可。  
 <p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/wave.gif" height="224?raw=true" width="490"/></p>
-<p align="center"></p>  
+
 raymarch 和 海洋的渲染 我其他的文章有涉及，这里就不说了  
 
 **4.绘制泡泡**  
@@ -311,8 +310,13 @@ Shader "FishManShaderTutorial/GameHPUI" {
 }
 ```
 
-### 6.unity shader源码
-其他shader源码可以在这里[下载][1]
+
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
 
-  [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
+  [4]: https://www.shadertoy.com/view/Xsd3DB

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程25 Ripple 两种涟漪实现方式"
+title:  "中级Shader教程25 水专题02:两种涟漪实现方式"
 date:   2018-04-26 16:09:03
 author: Jiepeng Tan
 categories: 
@@ -9,8 +9,8 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Rain/head.gif?raw=true" width="512"></p>
 
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Rain/head.gif?raw=true" width="768">
 
 
 
@@ -22,8 +22,8 @@ mathjax: true
 ```c
  y = sin(31.*t) * smoothstep(-0.6, -0.3, t) * smoothstep(0., -0.3,t)
 ```
-变现形式为：  
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Ripple/math.gif?raw=true" width="768">
+图形解析为：  
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Ripple/math.gif?raw=true" width="256"></p>
 
 
 ```c
@@ -73,9 +73,10 @@ float Ripples(float2 uv ,float layerNum,float tileNum,float period,float spreadS
 }
 ```
 
-#### 2.图像处理+波动传播 
-思想:波动传播 
-优点:无论多么复杂的运动，时间复杂度都是O(1)缺点:需要两个缓存buffer来实现，同时效果和精度，受buffer的大小限制
+#### 2.图像处理+波动传播   
+思想:波动传播     
+优点:无论多么复杂的运动，时间复杂度都是O(1)  
+缺点:需要两个缓存buffer来实现，同时效果和精度，受buffer的大小限制    
 
 ```c
 // p11 是紫色坐标前两帧的值

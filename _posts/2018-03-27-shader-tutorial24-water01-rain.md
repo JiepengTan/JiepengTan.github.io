@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程24 Ripple 两种雨实现方式"
+title:  "中级Shader教程24 水专题01:两种雨实现方式"
 date:   2018-04-26 16:09:03
 author: Jiepeng Tan
 categories: 
@@ -9,8 +9,7 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Rain/head.gif?raw=true" width="768">
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Rain/head.gif?raw=true" width="512"></p>
 
 
 

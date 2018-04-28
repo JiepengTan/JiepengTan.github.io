@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中级Shader教程07 voronoi算法"
+title:  "中级Shader教程23 voronoi算法"
 date:   2018-03-27 16:09:03
 author: Jiepeng Tan
 categories: 
@@ -9,7 +9,7 @@ tags: shader_tutorial theory shader
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
-<img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/Base/Voronoi/head.gif?raw=true" width="256">
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/Base/Voronoi/head.gif?raw=true" width="256"></p>
 
 
 
@@ -63,8 +63,8 @@ return CalcColor(minDist,minPoint);
 
 ### 4.更多信息可以参考
 我的这篇关于Caustic效果的实现  
-[The Book of Shaders][1]
-iq大神的[blog1][2] [blog2][3]
+[The Book of Shaders][4]
+iq大神的[blog1][5] [blog2][6]
 
 ### 5.unity shader源码
 ```c
@@ -155,7 +155,14 @@ Shader "FishManShaderTutorial/Voronoi"
 
 ```
 
+- [本教程配套blog ][1]
+- [本教程配套项目源码 ][2]
+- [教程中抽取的RayMarching框架][3]
 
-  [1]: http://thebookofshaders.com/12/
-  [2]: http://iquilezles.org/www/articles/voronoilines/voronoilines.htm
-  [3]: http://www.iquilezles.org/www/articles/smoothvoronoi/smoothvoronoi.htm
+
+  [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
+  [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
+  [4]: http://thebookofshaders.com/12/
+  [5]: http://iquilezles.org/www/articles/voronoilines/voronoilines.htm
+  [6]: http://www.iquilezles.org/www/articles/smoothvoronoi/smoothvoronoi.htm
