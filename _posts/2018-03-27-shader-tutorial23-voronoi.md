@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "中级Shader教程23 voronoi算法"
-date:   2018-03-27 16:09:03
+date:   2018-04-26 16:09:03
 author: Jiepeng Tan
 categories: 
 - shader tutorial
