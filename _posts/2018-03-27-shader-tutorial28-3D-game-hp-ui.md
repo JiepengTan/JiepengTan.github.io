@@ -10,7 +10,8 @@ img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
  
-<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/game_hp_ui.gif?raw=true" width="256"></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/head.gif?raw=true" width="512"></p>
+
 
 
 
@@ -33,7 +34,7 @@ mathjax: true
 
 **3.绘制波浪**  
 使用RayMarch方式在原点绘制一个圆盘，然后通过在y值使用两个sin来合成一个小的wave，将这个渲染的结果通过类似贴图的方式贴在水面之上，通过时间控制其y值偏移即可。  
-<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/wave.gif" height="224?raw=true" width="490"/></p>
+<p align="center"> <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/GameHPUI/wave.gif?raw=true" width="512"/></p>
 
 raymarch 和 海洋的渲染 我其他的文章有涉及，这里就不说了  
 
