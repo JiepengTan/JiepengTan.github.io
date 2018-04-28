@@ -12,9 +12,9 @@ mathjax: true
 
 
 
+# FishMan Shader Tutorial
 
 ### **0.说在前面**
-
 如果你觉得本教程有用，就去[github][1]中给我颗星星⭐吧.
 
 - [本教程配套blog ][1]  
@@ -63,9 +63,18 @@ mathjax: true
     - [雾][22]
     - [云][23]
  3. **shader技术整合**
-    - GameUI 血瓶
+    - [GameUI 血瓶][21]
     - 荒原湖泊
     - 西湖
+    
+#### 4.**专题**  
+1. **水**  
+    - [下雨][28]
+    - [涟漪][29]
+    - [水底焦散][30]
+    - [窗前雨滴][31]
+
+
 
 ----------
 
@@ -97,10 +106,11 @@ mathjax: true
 
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial2D/Rain/head.gif?raw=true" width="256"></p> 
 
+<p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Rain/head.gif?raw=true" width="256"></p> 
 <p align="center"><img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Caustic/head.gif?raw=true" width="768"></p>
 ----------
 
-### **7.链接：**
+### **3.链接：**
 - [本教程配套blog ][1]
 - [本教程配套项目源码 ][2]
 - [教程中抽取的RayMarching框架][3]
@@ -132,5 +142,11 @@ mathjax: true
   [23]: https://jiepengtan.github.io/2018/04/23/shader-tutorial20-cloud/
   [24]: https://jiepengtan.github.io/2018/04/25/shader-tutorial21-shader-tips-compute/
   [25]: https://www.shadertoy.com/user/FishMan
-  [26]: https://jiepengtan.github.io/
-  
+  [26]: https://jiepengtan.github.io/ 
+  [27]: https://jiepengtan.github.io/2018/04/26/shader-tutorial23-voronoi/
+  [28]: https://jiepengtan.github.io/2018/04/26/shader-tutorial24-water01-rain/
+  [29]: https://jiepengtan.github.io/2018/04/26/shader-tutorial25-water02-ripple/
+  [30]: https://jiepengtan.github.io/2018/04/26/shader-tutorial26-water03-caustic/
+  [31]: https://jiepengtan.github.io/2018/04/26/shader-tutorial27-water04-rain_on_window/
+  [32]: https://jiepengtan.github.io/2018/04/26/shader-tutorial27-water04-rain_on_window/
+ 
