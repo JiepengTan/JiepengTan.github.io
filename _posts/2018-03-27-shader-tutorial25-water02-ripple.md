@@ -27,7 +27,8 @@ mathjax: true
 
 
 ```c
-// create by JiepengTan 2018-04-25 
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-04-25 
 // email: jiepengtan@gmail.com
 // all right reserve
 float _Ripple(float period,float spreadSpd,float waveGap,float2 uv,float rnd){

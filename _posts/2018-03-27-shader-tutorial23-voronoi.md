@@ -68,7 +68,8 @@ iq大神的[blog1][5] [blog2][6]
 
 ### 5.unity shader源码
 ```c
-// create by JiepengTan 2018-04-12  email: jiepengtan@gmail.com
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-04-12  email: jiepengtan@gmail.com
 Shader "FishManShaderTutorial/Voronoi"
 {
     Properties

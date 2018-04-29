@@ -59,8 +59,9 @@ float3 Cloud(float3 bgCol,float3 ro,float3 rd,float3 cloudCol,float spd, float l
 
 3.其他部分的绘制  
 
-```
-// create by JiepengTan 2018-04-14  email: jiepengtan@gmail.com
+```c
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-04-14  email: jiepengtan@gmail.com
 float4 ProcessRayMarch(float2 uv,float3 ro,float3 rd,inout float sceneDep,float4 sceneCol)  {
     fixed4 sph = fixed4(0.0,0.0,0.0, 0.5);
     fixed3 col = fixed3(0.0,0.0,0.0);  

@@ -22,7 +22,8 @@ mathjax: true
 简单代码如下：
 
 ```c
-// create by JiepengTan 2018-04-14 
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-04-14 
 // email: jiepengtan@gmail.com
 Shader "FishManShaderTutorial/SDFBouncedBall" {
     Properties{

@@ -94,7 +94,8 @@ fixed3 Fog(in fixed3 bgCol, in fixed3 ro, in fixed3 rd, in fixed maxT,
 ### **3.全部源码**  
 
 ```c
-// create by JiepengTan 2018-04-13  
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-04-13  
 // email: jiepengtan@gmail.com
 Shader "FishManShaderTutorial/Fog" {
     Properties{

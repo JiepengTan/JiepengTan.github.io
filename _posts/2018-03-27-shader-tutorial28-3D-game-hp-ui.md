@@ -49,7 +49,8 @@ raymarch 和 海洋的渲染 我其他的文章有涉及，这里就不说了
 
 ### 5.源码
 ```c
-// create by JiepengTan 2018-03-25  email: jiepengtan@gmail.com
+// create by JiepengTan 
+// https://github.com/JiepengTan/FishManShaderTutorial2018-03-25  email: jiepengtan@gmail.com
 
 Shader "FishManShaderTutorial/GameHPUI" {
     Properties{
