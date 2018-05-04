@@ -144,7 +144,7 @@ float Wave(float2 uv, float2 emitter, float speed, float phase){
 <p align="center">
 <img src="https://github.com/JiepengTan/JiepengTan.github.io/blob/master/assets/img/blog/ShaderTutorial3D/Sea/head2.gif?raw=true" width="512"></p> 
 
-
+嗯
 ##### 1.方向波
 ```c
 #define Waves(pos,_LOOP_NUM)\
