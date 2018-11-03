@@ -4,7 +4,7 @@ title:  "游戏优化教程00 总纲"
 date:   2018-11-03 16:09:03
 author: Jiepeng Tan
 categories: 
- - Game Optimization
+ - GameOptimization
 tags: game_optimization_tutorial
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true

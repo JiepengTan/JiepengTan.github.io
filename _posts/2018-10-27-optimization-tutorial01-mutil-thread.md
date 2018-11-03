@@ -4,8 +4,8 @@ title:  "游戏优化教程01 多线程"
 date:   2018-11-03 16:09:03
 author: Jiepeng Tan
 categories: 
- - Game Optimization MutilThread
-tags: game_optimization_tutorial
+ - GameOptimization
+tags: game_optimization_tutorial_mutilThread
 img_path: /assets/img/blog/ShaderTutorial2D/Snow
 mathjax: true
 ---
