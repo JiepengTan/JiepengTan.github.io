@@ -71,6 +71,6 @@ mathjax: true
   [2]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
   [3]: https://github.com/JiepengTan
   [4]: https://jiepengtan.github.io/ 
-  [5]: https://github.com/JiepengTan/ThreadPattern_Master-Slaver
+  [5]: https://jiepengtan.github.io/tag/#game_optimization_tutorial
   [6]: https://github.com/JiepengTan/ThreadPattern_Master-Slaver
   
