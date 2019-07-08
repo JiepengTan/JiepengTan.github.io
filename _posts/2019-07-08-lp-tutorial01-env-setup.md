@@ -15,7 +15,22 @@ mathjax: true
 # FishMan LockstepPlatform Tutorial 
 
 ### **0.项目下载**
- TODO
+
+#### **1.Mac 用户**
+    1. 下载LockstepPlatform [https://github.com/JiepengTan/LockstepPlatform/releases/tag/v0.3.5][11]
+    2. 下载Demo [https://github.com/JiepengTan/Lockstep_Demo2D_Tank/releases/tag/v0.3.5][12]
+    3. 解压 LockstepPlatform 并命名为LockstepPlatform (注意目前一定需要这样命名)
+    4. 使用Rider 或visualStudio 打开 LockstepPlatform/LockstepPlatform.sln。(不要编译,等待编译器价值完成)
+    5. 打开你想要使用的Unity的版本
+    6. 执行 Lockstep_Demo2D_Tank-0.3.5/Setup.sh
+    7. 点击 Lockstep_Demo2D_Tank-0.3.5/RunServer.sh 运行服务器
+    8. Unity 打开Lockstep_Demo2D_Tank-0.3.5/Src/Unity/ 运行游戏
+
+    想看视频的可以点击这里 [Mac环境搭建视频][15] 
+
+#### **2.Win 用户**
+//TODO
+
 ----------
 
 ### **传送门**
@@ -38,6 +53,10 @@ mathjax: true
  [8]: https://jiepengtan.github.io/2018/03/26/shader-tutorial00-outline/
  [9]: https://github.com/JiepengTan/LockstepPlatform
  [10]: https://github.com/JiepengTan/LockstepPlatform
- [11]: https://github.com/proepkes/UnityLockstep
+ [11]: https://github.com/JiepengTan/LockstepPlatform/releases/tag/v0.3.5
+ [12]: https://github.com/JiepengTan/LockstepPlatform/releases/tag/v0.3.5
+ [13]: https://github.com/proepkes/UnityLockstep
+ [14]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
+ [15]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
  
  
