@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "游戏优化教程00 总纲"
+title:  "游戏优化 教程00 总纲"
 date:   2018-11-03 16:09:03
 author: Jiepeng Tan
 categories: 
