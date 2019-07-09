@@ -28,6 +28,8 @@ mathjax: true
 
     想看视频的可以点击这里 [Mac环境搭建视频][15] 
 
+<iframe height="400" width="600" src="//player.bilibili.com/player.html?aid=58401872&cid=101865401&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 #### **2.Win 用户**
 //TODO
 ----------
