@@ -5,7 +5,7 @@ date:   2019-07-06 16:09:06
 author: Jiepeng Tan
 categories: 
  - LockstepPlatform
-tags: lockstepplatform_tutorial_ecs_lockstep
+tags: LockstepPlatform tutorial ECS lockstep
 img_path: /assets/img/blog/LockstepPlatform
 mathjax: true
 ---
@@ -29,13 +29,13 @@ mathjax: true
     想看视频的可以点击这里 [Mac环境搭建视频][15] 
 
 <iframe height="400" width="600" src="//player.bilibili.com/player.html?aid=58401872&cid=101865401&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+ 
 #### **2.Win 用户**
 //TODO
 ----------
 
 ### **传送门**
-- [本教程配套blog https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial00-outline/][1]
+- [本教程配套blog][1]
 - [LockstepPlatform 框架源码 https://github.com/JiepengTan/LockstepPlatform][2]
 - [2D demo 地址 https://github.com/JiepengTan/Lockstep_Demo2D_Tank][3]
 - [3D demo 地址]//TODO
@@ -44,11 +44,11 @@ mathjax: true
 - LockstepPlatform 帧同步 or ECS 技术交流qq群:**901118569**
 
 
- [1]: https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial00-outline/
+ [1]: https://jiepengtan.github.io/2019/07/08/lp-tutorial00-outline/
  [2]: https://github.com/JiepengTan/LockstepPlatform
  [3]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
  [4]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
- [5]: https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial01-env-setup/
+ [5]: https://jiepengtan.github.io/2019/07/06/lp-tutorial01-env-setup/
  [6]: https://github.com/JiepengTan/FishManShaderTutorial
  [7]: https://github.com/JiepengTan/LockstepECSGenerator
  [8]: https://jiepengtan.github.io/2018/03/26/shader-tutorial00-outline/

@@ -5,7 +5,7 @@ date:   2019-07-06 16:09:03
 author: Jiepeng Tan
 categories: 
  - LockstepPlatform
-tags: lockstepplatform_tutorial_ecs_lockstep
+tags: LockstepPlatform tutorial ECS lockstep
 img_path: /assets/img/blog/LockstepPlatform
 mathjax: true
 ---
@@ -18,10 +18,10 @@ mathjax: true
 
   本教程会同时伴随一个框架的诞生[LockstepPlatform][2]，该框架核心技术点是 帧同步 & ECS,目标是提供双端的帧同步解决方案
   本框架的初衷：
-  1. 是给独立开发者使用,他们拥有多个小游戏，但是每个小游戏如果要联网，需要单独的服务器，如果采用非帧同步方案，如状态同步，会导致额外的网络逻辑代码，需要更长的开发周期，成本过高，综合多种原因导致很多小游戏都是单机。我想改变这种现状。 
+  1. 是给独立开发者使用,他们拥有多个小游戏，但是每个小游戏如果要联网，需要单独的服务器，如果采用非帧同步方案，如状态同步，会导致额外的网络逻辑代码，需要更长的开发周期，成本过高，综合多种原因导致很多小游戏都是单机。我想让独立游戏联机变成普遍现象。 
 
   **本教程内容涵盖：**
-
+ 
 #### **1.库编写**
   - [数学库][14] 
   - [碰撞检测库2D][15] 
@@ -126,7 +126,7 @@ mathjax: true
 ----------
 
 ### **传送门**
-- [本教程配套blog https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial00-outline/][1]
+- [本教程配套blog][1]
 - [LockstepPlatform 框架源码 https://github.com/JiepengTan/LockstepPlatform][2]
 - [2D demo 地址 https://github.com/JiepengTan/Lockstep_Demo2D_Tank][3]
 - [3D demo 地址]//TODO
@@ -135,11 +135,11 @@ mathjax: true
 - LockstepPlatform 帧同步 or ECS 技术交流qq群:**901118569**
 
 
- [1]: https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial00-outline/
+ [1]: https://jiepengtan.github.io/2019/07/06/lp-tutorial00-outline/
  [2]: https://github.com/JiepengTan/LockstepPlatform
  [3]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
  [4]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
- [5]: https://jiepengtan.github.io/2019/07/08/2019-07-08-lp-tutorial01-env-setup/
+ [5]: https://jiepengtan.github.io/2019/07/06/lp-tutorial01-env-setup/
  [6]: https://github.com/JiepengTan/FishManShaderTutorial
  [7]: https://github.com/JiepengTan/LockstepECSGenerator
  [8]: https://jiepengtan.github.io/2018/03/26/shader-tutorial00-outline/
