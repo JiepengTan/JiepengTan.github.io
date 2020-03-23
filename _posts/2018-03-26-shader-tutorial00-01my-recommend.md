@@ -49,7 +49,7 @@ mathjax: true
   http://glslsandbox.com/?page=1   
 
 书籍群共享中下载    
-**shader技术交流qq群:299080901**  
+ 
 
   [1]: http://iquilezles.org/www/index.htm  
   [2]: http://iquilezles.org/www/articles/raymarchingdf/raymarchingdf.htm 

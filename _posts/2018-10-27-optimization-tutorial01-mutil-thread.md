@@ -42,12 +42,15 @@ mathjax: true
 - [多线程框架][6]
 
 ### **4.其他：**
+## [**配套视频**][40]  
 - [本教程配套blog ][1]
 - [我的另外一个教程：shader中级教程][2]
 - [个人的github][3]
 - [第一时间更新blog地址][4]
 
+  [40]: https://space.bilibili.com/308864667/channel/detail?cid=112754
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [40]:https://space.bilibili.com/308864667/channel/detail?cid=112754
   [2]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
   [3]: https://github.com/JiepengTan
   [4]: https://jiepengtan.github.io/ 

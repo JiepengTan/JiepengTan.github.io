@@ -70,6 +70,7 @@ col = clamp(col, 0.0, 1.0);
 　　先将空间进行grid划分(类似[BouncedBalls][7])，让后使用类似Voronio实现方式对空间中的绘制长方体，加上前面提到的[多层透明混合][6]也可实现雨效果，不过性能会较为损伤
 
 
+## [**配套视频**][40]  
 - [本教程配套blog ][1]
 - [本教程配套项目源码 ][2]
 - [教程中抽取的RayMarching框架][3]
@@ -77,6 +78,7 @@ col = clamp(col, 0.0, 1.0);
 
   [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
   [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [40]:https://space.bilibili.com/308864667/channel/detail?cid=112754
   [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
   [5]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/

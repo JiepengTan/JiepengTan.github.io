@@ -126,12 +126,14 @@ float3 RenderCloud(float3 bgCol,float3 ro,float3 rd,float tmax){
 
 
 
+## [**配套视频**][40]  
 - [本教程配套blog ][1]
 - [本教程配套项目源码 ][2]
 - [教程中抽取的RayMarching框架][3]
 
   [1]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
   [2]: https://github.com/JiepengTan/FishManShaderTutorial
+  [40]:https://space.bilibili.com/308864667/channel/detail?cid=112754
   [3]: https://github.com/JiepengTan/Unity-Raymarching-Framework
   [4]: https://jiepengtan.github.io/2018/03/27/shader-tutorial01-base-math/
   [5]: https://jiepengtan.github.io/2018/04/22/shader-tutorial09-1-raymarch-framework/

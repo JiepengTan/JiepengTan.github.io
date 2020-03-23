@@ -62,12 +62,14 @@ mathjax: true
 **1.一个人的能力和见识毕竟有限，对于框架的设计如果有好的建议或者参考项目源码，可以给我留言，或者给我发邮件JiepengTan@gmail.com，非常感谢。**
 **2.如果发现了我的源码中的bug，你可以在对应的文章下面留言，或者给我邮件，我会非常感谢并尽快的修复**
 
+## [**配套视频**][40]  
 - [本教程配套blog ][1]
 - [我的另外一个教程：shader中级教程][2]
 - [个人的github][3]
 - [第一时间更新blog地址][4]
 
   [1]: https://github.com/JiepengTan/FishManShaderTutorial
+  [40]:https://space.bilibili.com/308864667/channel/detail?cid=112754
   [2]: https://blog.csdn.net/tjw02241035621611/article/details/80038608
   [3]: https://github.com/JiepengTan
   [4]: https://jiepengtan.github.io/ 

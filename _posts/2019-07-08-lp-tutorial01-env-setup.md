@@ -50,6 +50,7 @@ mathjax: true
  [4]: https://github.com/JiepengTan/Lockstep_Demo2D_Tank
  [5]: https://jiepengtan.github.io/2019/07/06/lp-tutorial01-env-setup/
  [6]: https://github.com/JiepengTan/FishManShaderTutorial
+  [40]:https://space.bilibili.com/308864667/channel/detail?cid=112754
  [7]: https://github.com/JiepengTan/LockstepECSGenerator
  [8]: https://jiepengtan.github.io/2018/03/26/shader-tutorial00-outline/
  [9]: https://github.com/JiepengTan/LockstepPlatform
